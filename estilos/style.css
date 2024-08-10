@@ -1,0 +1,270 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fffcf2;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*mi negocio*/
+.contenedor {
+    width: 100%; /* Ancho igual al de la pantalla */
+    height: 100px; /* Altura fija de 100px */
+    display: flex; /* Utiliza Flexbox para centrar el contenido */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    background-color: #fffcf2; /* Fondo gris claro para visualizar el contenedor */
+}
+
+.marca {
+    font-size: 40px;
+    margin-top: 0px; /* Remueve cualquier margen por defecto del h1 */
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: bold;
+    color: #343a40;
+}
+
+.navbar {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    background-color: #fffcf2;
+    padding: 10px 20px;
+}
+
+.logo {
+    font-size: 20px;
+}
+.nav-list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centra los elementos de la lista horizontalmente */
+    align-items: center;
+}
+
+.nav-list li {
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s;
+    font-size: 18px;
+    font-family: sans-serif;
+    font-size: calc(1em * 0.875);
+}
+
+.nav-list a:hover {
+    color: #ECA6A6;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5%;
+    background-color: #fffcf2;
+    border: 2px solid #fffcf2;
+}
+
+.bar {
+    background-color: #d5bdaf;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.carousel-container {
+    max-width: 50%; /* Cambia esto al ancho que prefieras, por ejemplo, 50%, 75%, etc. */
+    margin: 0 auto; /* Centrar el carrusel horizontalmente */
+    height: 80px;
+}
+
+.cajon-de-redes-sociales {
+    display: flex;
+    width: 80%;
+    height: 600px;
+    background-color: brown;
+    margin: 100px auto;
+    padding: 10px;
+    overflow: hidden; 
+}
+.imagen-social {
+    display: flex;
+    background-color: #ECA6A6;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+.imagen-social > img {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+.redes-sociales {
+    width: 100px;
+    height: 100px;
+    display: block;
+    text-align: center;
+    background-color: papayawhip;
+    margin: auto;
+}
+
+.container {
+    margin-top: 80px;
+}
+img {
+    width: 100%;
+}
+
+.imagenCircular {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+
+/*----------------Quien soy------------------*/
+
+.informacion{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    background-color: #e8d1c5;
+    margin: 0px auto;
+    /*border: 1px solid #ccc;*/
+    padding: 10px; /* Espaciado interno */
+    overflow: hidden; 
+    /*flex-direction: column;  Dirección de los elementos en columna  ----> lo voy a usar en version movie*/
+    color: #6c584c;
+    /*box-shadow: 7px 13px 37px #c9ada7;*/
+}
+
+.img-container {
+        width: 50%; /* Asegura que el contenedor de la imagen no exceda la mitad del ancho del contenedor principal */
+        /* Ajusta la altura automáticamente */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden; /* Esconde cualquier desbordamiento */
+        border-radius: 5px; /* Hace que el contenedor sea redondo */
+        margin-right: 10px; /* Espaciado a la derecha del contenedor de la imagen */
+        /*background-color: #4CAF50;*/
+    }
+    .img-container img {
+        width: 80%; /* Asegura que la imagen llene completamente el contenedor */
+        /*height: 60%;  Asegura que la imagen llene completamente el contenedor */
+        object-fit: cover; /* Cubre completamente el contenedor de la imagen manteniendo la proporción */
+        border-radius: 5px;
+    }
+
+    .informacion .informacion-parrafo {
+        width: 50%; /* Asegura que el párrafo no exceda la mitad del ancho del contenedor */
+        overflow: hidden; /* Esconde el texto que sobrepasa los límites */
+        text-align: center; /* Alinea el texto del párrafo a la izquierda */
+        padding: 0 10px; /* Añade espaciado interno */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Añade espaciado interno */
+        margin: auto;
+        font-family: sans-serif;
+        font-size: calc(1em * 0.875);
+    }
+
+
+@media (max-width: 768px) {
+    .informacion {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-container {
+        margin: auto;
+        width: 100%;
+    }
+    .informacion .informacion-parrafo {
+        width: 100%;
+        
+    }
+    .informacion p {
+        margin-top: 10px;
+        width: 100%;
+    }
+    h3 {
+        margin-top: 20px;
+    }
+
+    .marca {
+        font-size: 22px;
+        margin-top: 10px;
+    }
+    
+}
+@media (min-width: 769px) {
+    .navbar h1 {
+        display: none;
+    }
+    .movie .navbar h1 {
+        display: block;
+        margin-right: auto;
+    }
+}
+@media (max-width: 768px) {
+    .nav-list {
+        display: none;
+        width: 100%;
+        text-align: end;
+        font-size: 20px;
+    }
+    .navbar {
+            justify-content: space-between;
+            padding: 10px;
+    }
+    .navbar h1 {
+            display: block;
+        }
+
+    .nav-list.active {
+        background-color: #fffcf2;
+        height: 200px;
+        border-radius: 8px;
+        display: block;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+    .contenedor {
+        display: none;
+    }
+
+    .contenedor-de-libros{
+        margin: auto;
+        width: 100%;
+    }
+    .imagenes-item{
+        width: 80px;
+        margin: 0 0 0 150px;
+        position: relative;
+    }
+    
+}
