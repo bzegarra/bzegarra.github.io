@@ -67,7 +67,7 @@ a {
 }
 
 .nav-list a:hover {
-    color: #ECA6A6;
+    color: red;
 }
 
 .menu-toggle {
