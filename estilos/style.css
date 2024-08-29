@@ -3,32 +3,45 @@
     margin: 0;
     padding: 0;
 }
-body{
-    background-color: #fffcf2;
+:root {
+    --soft-beige: #7f5539;
+    --light-warm-gray: #d6ccc2;
+    --soft-cream: #f5ebe0;
+    --sand-rose: #e8c8b2; 
+    --light-gray: #edede9;  
+    --grey: #343a40;
+    --dark: black;
 }
-
+body{
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    min-height: 100vh;
+    /*margin: 0;*/
+    /*background-color: ;*/
+}
 a {
     text-decoration: none;
 }
-
-/*mi negocio*/
-.contenedor {
-    width: 100%; /* Ancho igual al de la pantalla */
-    height: 100px; /* Altura fija de 100px */
-    display: flex; /* Utiliza Flexbox para centrar el contenido */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    background-color: #fffcf2; /* Fondo gris claro para visualizar el contenedor */
+main {
+    flex: 1;
 }
 
-.marca {
+/*--- mi negocio ---*/
+.brand-container {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffcf2;
+}
+
+.brand-container__title {
     font-size: 40px;
-    margin-top: 0px; /* Remueve cualquier margen por defecto del h1 */
     font-family: "Satisfy", cursive;
-    font-weight: 400;
-    font-style: normal;
     font-weight: bold;
-    color: #343a40;
+    color: var(--soft-beige); 
+    text-align: center;
 }
 
 .navbar {
@@ -44,30 +57,31 @@ a {
 .logo {
     font-size: 20px;
 }
-.nav-list {
+.navbar__list {
     padding: 0;
+    margin: 0;
     list-style: none;
     display: flex;
-    justify-content: center; /* Centra los elementos de la lista horizontalmente */
+    justify-content: center;
     align-items: center;
 }
 
-.nav-list li {
+.navbar__list-item {
     padding: 0 10px;
     margin: 0 10px;
 }
 
-.nav-list a {
-    text-decoration: none;
-    color: black;
+.navbar__list-link {
+    display: flex;
+    justify-content: space-between;
+    color: var(--grey);
     transition: color 0.3s;
     font-size: 18px;
-    font-family: sans-serif;
-    font-size: calc(1em * 0.875);
+    font-family: Arial, sans-serif;
 }
 
-.nav-list a:hover {
-    color: red;
+.navbar__list-link:hover {
+    color: var(--soft-beige);;
 }
 
 .menu-toggle {
@@ -86,9 +100,10 @@ a {
     margin: 3px 0;
     transition: 0.3s;
 }
+/*---------------------------------------*/
 
 .carousel-container {
-    max-width: 50%; /* Cambia esto al ancho que prefieras, por ejemplo, 50%, 75%, etc. */
+    max-width: 50%;
     margin: 0 auto; /* Centrar el carrusel horizontalmente */
     height: 80px;
 }
@@ -159,37 +174,43 @@ img {
 }
 
 .img-container {
-        width: 50%; /* Asegura que el contenedor de la imagen no exceda la mitad del ancho del contenedor principal */
-        /* Ajusta la altura automáticamente */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden; /* Esconde cualquier desbordamiento */
-        border-radius: 5px; /* Hace que el contenedor sea redondo */
-        margin-right: 10px; /* Espaciado a la derecha del contenedor de la imagen */
-        /*background-color: #4CAF50;*/
-    }
-    .img-container img {
-        width: 80%; /* Asegura que la imagen llene completamente el contenedor */
-        /*height: 60%;  Asegura que la imagen llene completamente el contenedor */
-        object-fit: cover; /* Cubre completamente el contenedor de la imagen manteniendo la proporción */
-        border-radius: 5px;
-    }
-
-    .informacion .informacion-parrafo {
-        width: 50%; /* Asegura que el párrafo no exceda la mitad del ancho del contenedor */
-        overflow: hidden; /* Esconde el texto que sobrepasa los límites */
-        text-align: center; /* Alinea el texto del párrafo a la izquierda */
-        padding: 0 10px; /* Añade espaciado interno */
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Añade espaciado interno */
-        margin: auto;
-        font-family: sans-serif;
-        font-size: calc(1em * 0.875);
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-right: 10px;
+    /*background-color: #4CAF50;*/
+}
+.img-container img {
+    width: 80%;
+    /*height: 60%;  Asegura que la imagen llene completamente el contenedor */
+    object-fit: cover;
+    border-radius: 5px;
     }
 
+.informacion .informacion-parrafo {
+    width: 50%;
+    overflow: hidden;
+    text-align: center;
+    padding: 0 10px;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    font-family: sans-serif;
+    font-size: calc(1em * 0.875);
+}
 
+.elemento-separador {
+    display: block;
+    width: 90%;
+    height: 2px;
+    background-color: var(--soft-beige); 
+    margin: 0 auto;
+}
+
+/*----------------------*/
 @media (max-width: 768px) {
     .informacion {
         display: flex;
