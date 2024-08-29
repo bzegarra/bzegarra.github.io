@@ -26,7 +26,7 @@ main {
     flex: 1;
 }
 
-/*--- mi negocio ---*/
+/*--- mi nombre de negocio ---*/
 .brand-container {
     width: 100%;
     height: 100px;
@@ -43,20 +43,56 @@ main {
     color: var(--soft-beige); 
     text-align: center;
 }
-
+/*-----nabvar en movie---------*/
 .navbar {
-    width: 100%;
-    height: 100px;
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    justify-content: space-around;
     align-items: center;
-    background-color: #fffcf2;
-    padding: 10px 20px;
+    background-color: var(--light-gray); 
+    transition: all 0.3s ease;
+}
+.navbar__item {
+    display: flex;
+}
+.navbar__icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.navbar.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 5%;
+    background-color: var(--light-gray);
+    border: 2px solid var(--light-gray);
+}
+.bar {
+    background-color: var(--dark); 
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+    transition: 0s opacity 0s;;
+}
+.menu-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 7px);
 }
 
-.logo {
-    font-size: 20px;
+.menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
 }
+
+.menu-toggle.active .bar:nth-child(3) {
+    transform: rotate(-47deg) translate(5px, -6.5px); /*6*/
+}
+/*-----nabvar en destop---------*/
 .navbar__list {
     padding: 0;
     margin: 0;
@@ -65,12 +101,10 @@ main {
     justify-content: center;
     align-items: center;
 }
-
 .navbar__list-item {
     padding: 0 10px;
     margin: 0 10px;
 }
-
 .navbar__list-link {
     display: flex;
     justify-content: space-between;
@@ -79,29 +113,10 @@ main {
     font-size: 18px;
     font-family: Arial, sans-serif;
 }
-
 .navbar__list-link:hover {
     color: var(--soft-beige);;
 }
-
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    border-radius: 5%;
-    background-color: #fffcf2;
-    border: 2px solid #fffcf2;
-}
-
-.bar {
-    background-color: #d5bdaf;
-    height: 3px;
-    width: 25px;
-    margin: 3px 0;
-    transition: 0.3s;
-}
 /*---------------------------------------*/
-
 .carousel-container {
     max-width: 50%;
     margin: 0 auto; /* Centrar el carrusel horizontalmente */
@@ -211,6 +226,24 @@ img {
 }
 
 /*----------------------*/
+@media (min-width: 769px) {
+    .navbar__item, 
+    .menu__hamburguesa {
+        display: none;
+    }
+    .navbar {
+        display: flex;
+        padding: 20px; 
+        justify-content: space-around;
+        align-items: center; 
+        width: 100%;
+    }
+    footer {
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+    }
+}
 @media (max-width: 768px) {
     .informacion {
         display: flex;
@@ -233,59 +266,57 @@ img {
         margin-top: 20px;
     }
 
-    .marca {
-        font-size: 22px;
-        margin-top: 10px;
-    }
+
     
 }
-@media (min-width: 769px) {
-    .navbar h1 {
-        display: none;
-    }
-    .movie .navbar h1 {
-        display: block;
-        margin-right: auto;
-    }
-}
 @media (max-width: 768px) {
-    .nav-list {
-        display: none;
-        width: 100%;
-        text-align: end;
-        font-size: 20px;
+    .brand-container {
+        height: 100px;  
+    }
+    .brand-container__title {
+        font-size: 30px;
+        margin-top: 10px;
     }
     .navbar {
-            justify-content: space-between;
-            padding: 10px;
+        justify-content: space-between;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+        bottom: 0;
+        position: fixed;
+        width: 100%;
+        padding: 10px;
+        z-index: 3000;
+        flex-wrap: wrap-reverse;
     }
-    .navbar h1 {
-            display: block;
-        }
-
-    .nav-list.active {
-        background-color: #fffcf2;
-        height: 200px;
+    .navbar__list {
+        display: none;
+        width: 100%;
+        align-items: flex-start; /*end*/
+        position: fixed;
+        top: 0px;
+        left: 0;
+        height: calc(100% - 50px);
+        background-color: #fff;
+        z-index: 999;
+        padding-top: 50px;
+        flex-direction: column;
+        justify-content: flex-start;
+        list-style: none;
+        overflow-y: auto;
+    }
+    .navbar__list-item {
+        padding: 15px 20px;
+    }
+    .navbar__list.active {
         border-radius: 8px;
         display: block;
         text-align: center;
     }
-
     .menu-toggle {
         display: flex;
     }
-    .contenedor {
-        display: none;
-    }
-
-    .contenedor-de-libros{
-        margin: auto;
-        width: 100%;
-    }
-    .imagenes-item{
-        width: 80px;
-        margin: 0 0 0 150px;
-        position: relative;
-    }
-    
+    footer {
+        position: relative; 
+        bottom: 0;
+        margin-bottom: 50px;
+    }  
 }
