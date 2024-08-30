@@ -25,7 +25,6 @@ a {
 main {
     flex: 1;
 }
-
 /*--- mi nombre de negocio ---*/
 .brand-container {
     width: 100%;
@@ -34,7 +33,6 @@ main {
     justify-content: center; 
     align-items: center; 
 }
-
 .brand-container__title {
     font-size: 40px;
     font-family: "Satisfy", cursive;
@@ -284,11 +282,11 @@ img {
         display: block;
         text-align: center;
     }
-    .menu-toggle {
-        display: flex;
-    }
     .offset-below-navbar-fixed {
         margin-top: var(--offset-below-navbar-default)
+    }
+    .menu-toggle {
+        display: flex;
     }
     footer {
         position: relative; 
