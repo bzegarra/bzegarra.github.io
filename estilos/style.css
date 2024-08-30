@@ -43,7 +43,7 @@ main {
     color: var(--soft-beige); 
     text-align: center;
 }
-/*-----nabvar en movie---------*/
+/*-----nabvar en mobile---------*/
 .navbar {
     display: flex;
     justify-content: space-around;
