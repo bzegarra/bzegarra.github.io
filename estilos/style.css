@@ -58,6 +58,12 @@ main {
     height: 30px;
     cursor: pointer;
 }
+.offset-below-navbar-default {
+    margin-top: var(--offset-below-navbar-default)
+}
+.offset-below-navbar-fixed {
+    margin-top: var(--offset-below-navbar-fixed)
+}
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -280,6 +286,9 @@ img {
     }
     .menu-toggle {
         display: flex;
+    }
+    .offset-below-navbar-fixed {
+        margin-top: var(--offset-below-navbar-default)
     }
     footer {
         position: relative; 
