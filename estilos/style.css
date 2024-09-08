@@ -78,11 +78,9 @@ main {
 .menu-toggle.active .bar:nth-child(1) {
     transform: rotate(45deg) translate(5px, 7px);
 }
-
 .menu-toggle.active .bar:nth-child(2) {
     opacity: 0;
 }
-
 .menu-toggle.active .bar:nth-child(3) {
     transform: rotate(-47deg) translate(5px, -6.5px); /*6*/
 }
@@ -109,6 +107,41 @@ main {
 }
 .navbar__list-link:hover {
     color: var(--soft-beige);;
+}
+/*------------------------------------*/
+.product-thumbnail {
+    width: 100%;
+    height: 650px;
+    object-fit: cover;
+    margin-bottom: 60px;
+}
+/*------------------------------------*/
+.season-models-title {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+}
+.link-wrapper,
+.title-wrapper {
+    width: 50%;
+}
+.season-titl {
+    text-align: center;
+    font-size: 22px;
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: 2.2px;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+}
+.link-paragraph {
+    color: gray;
+    font-family: "Lato", sans-serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+    text-align: end;
 }
 /*---------imagen con y precios--------*/
 .product-container {
@@ -249,12 +282,9 @@ img {
     height: 600px;
     background-color: #e8d1c5;
     margin: 0px auto;
-    /*border: 1px solid #ccc;*/
-    padding: 10px; /* Espaciado interno */
+    padding: 10px;
     overflow: hidden; 
-    /*flex-direction: column;  Dirección de los elementos en columna  ----> lo voy a usar en version movie*/
     color: #6c584c;
-    /*box-shadow: 7px 13px 37px #c9ada7;*/
 }
 
 .img-container {
@@ -373,7 +403,32 @@ img {
     .menu-toggle {
         display: flex;
     }
-    /*----------*/
+    /*--------------*/
+    .product-thumbnail {
+        height: 80vh;
+    }
+    /*--------------*/
+    .product-thumbnail {
+        height: 80vh;
+    }
+    .season-models-title {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: auto;
+    }
+    .title-wrapper,
+    .link-wrapper {
+        width: 100%;
+    }
+    .season-title,
+    .link-paragraph {
+        text-align: center;
+    }
+    .season-titl {
+        padding: 5px;
+    }
+    /*--------------*/
     .product-container {
         display: flex;
         flex-direction: column;
