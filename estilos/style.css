@@ -25,7 +25,6 @@ a {
 main {
     flex: 1;
 }
-/*--- mi nombre de negocio ---*/
 .brand-container {
     width: 100%;
     height: 130px;  
@@ -40,7 +39,6 @@ main {
     color: var(--soft-beige); 
     text-align: center;
 }
-/*-----nabvar en mobile---------*/
 .navbar {
     display: flex;
     justify-content: space-around;
@@ -112,12 +110,91 @@ main {
 .navbar__list-link:hover {
     color: var(--soft-beige);;
 }
-/*---------------------------------------*/
-.carousel-container {
-    max-width: 50%;
-    margin: 0 auto; /* Centrar el carrusel horizontalmente */
-    height: 80px;
+/*---------imagen con y precios--------*/
+.product-container {
+    display: flex;
+    flex-direction: row;
+    width: 96%;
+    height: 660px;
+    gap: 10px;
+    background-color: var(--light-gray);
+    margin: auto;
+    margin-bottom: 100px;
 }
+.product-item {
+    width: 50%;
+    padding: 6px;
+    flex: 1;
+}
+.product-item--primary {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+.product-image-container { 
+    position: relative;
+    display: inline-block;
+}
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product-info {
+    display: flex;
+    justify-content: space-between;
+}
+.product-title, 
+.product-price {
+    position: relative;
+    bottom: 50px;
+    left: 0;
+    color: white;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.image-hidden {
+    display: none;
+}
+.product-item--secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product-detail {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+}
+.product-image-wrapper {
+    width: 50%;
+    object-fit: cover;
+}
+
+.product-text {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.product-title-, 
+.product-price- {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 24px;
+    color: #343a40;
+}
+.produc-parraf- {
+    text-align: center;
+}
+/*-------------------------------------*/
 
 .cajon-de-redes-sociales {
     display: flex;
@@ -234,6 +311,14 @@ img {
         right: 0;
         z-index: 1000;
     }
+    .hidden-on-mobile {
+        display: none;
+    }
+    .product-info- { 
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+    }
     footer {
         bottom: 0;
         width: 100%;
@@ -288,6 +373,42 @@ img {
     .menu-toggle {
         display: flex;
     }
+    /*----------*/
+    .product-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 4px;
+    }
+    .product-item {
+        width: 100%;
+    }
+    .product-image {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    .product-detail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
+    .product-image-wrapper {
+        width: 100%;
+        height: 450px;
+        margin-bottom: 12px;
+    }
+    .product-text {
+        display: none;
+    }
+    
+    .image-hidden {
+        position: relative;
+        display: inline-block;
+    }
+    /*----------*/
     footer {
         position: relative; 
         bottom: 0;
