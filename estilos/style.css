@@ -353,11 +353,12 @@ img {
 .carousel-container {
     position: relative;
     width: 100%;
+    height: auto;
     margin: 0 auto;
     overflow: hidden;
     display: flex;
     align-items: center;
-    background-color: antiquewhite;
+    background-color: rebeccapurple;
     padding: 20px 0;
 }
 .carousel {
