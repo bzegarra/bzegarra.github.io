@@ -350,6 +350,61 @@ img {
     border: 2px solid var(--soft-beige);
 }
 /*-------------------*/
+.carousel-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 20px 0;
+}
+.carousel {
+    overflow: hidden;
+    width: 100%;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    min-width: 20%;
+    text-align: center;
+}
+.carousel-item-content {
+    padding: 10px;
+}
+.carousel-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.carousel-caption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1;
+}
+.prev-btn {
+    left: 0;
+}
+.next-btn {
+    right: 0;
+}
+/*------------*/
 .elemento-separador {
     display: block;
     width: 90%;
@@ -540,6 +595,17 @@ img {
         margin-bottom: 40px;
     }
     /*----------*/
+    .carousel-item {
+        min-width: 33.33%;
+    }
+    .carousel-image {
+        width: 80px;
+        height: 80px;
+    }
+    .prev-btn, .next-btn {
+        display: none;
+    }
+    /*---------*/
     footer {
         position: relative; 
         bottom: 0;
