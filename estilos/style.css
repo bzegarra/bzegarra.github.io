@@ -228,8 +228,8 @@ main {
 .produc-parraf- {
     text-align: center;
 }
-/*-------------------------------------*/
 
+/*-------------------------------------*/
 .cajon-de-redes-sociales {
     display: flex;
     width: 80%;
@@ -249,11 +249,9 @@ main {
 .imagen-social > img {
     width: 100%;
 }
-
 li {
     list-style: none;
 }
-
 .redes-sociales {
     width: 100px;
     height: 100px;
@@ -263,19 +261,6 @@ li {
     margin: auto;
 }
 
-.container {
-    margin-top: 80px;
-}
-img {
-    width: 100%;
-}
-.imagenCircular {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: bottom;
-}
 /*----------------Quien soy------------------*/
 .informacion{
     display: flex;
@@ -287,7 +272,6 @@ img {
     overflow: hidden; 
     color: #6c584c;
 }
-
 .img-container {
     width: 50%;
     display: flex;
@@ -315,13 +299,63 @@ img {
     font-family: sans-serif;
     font-size: calc(1em * 0.875);
 }
-.elemento-separador {
-    display: block;
-    width: 90%;
-    height: 2px;
-    background-color: var(--soft-beige); 
+
+/*------carousel de imagenes-----*/
+.carousel-container {
+    position: relative;
+    width: 100%; /* Adjust the carousel width */
     margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: antiquewhite;
+    padding: 20px 0;
 }
+.carousel {
+    overflow: hidden;
+    width: 100%;
+}
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item {
+    min-width: 20%; /* Show 5 elements by default */
+    text-align: center;
+}
+.carousel-item-content {
+    padding: 10px;
+}
+.carousel-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Make images circular */
+    object-fit: cover;
+}
+.carousel-caption {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1;
+}
+.prev-btn {
+    left: 0;
+}
+.next-btn {
+    right: 0;
+}
+
 /*!--------------------------------*/
 .season-content {
     display: flex;
@@ -360,6 +394,14 @@ img {
     object-fit: cover;
     border-radius: 8px;
     border: 2px solid var(--soft-beige);
+}
+/*-------------------*/
+.elemento-separador {
+    display: block;
+    width: 90%;
+    height: 2px;
+    background-color: var(--soft-beige); 
+    margin: 0 auto;
 }
 /*----------------------*/
 @media (min-width: 769px) {
@@ -542,6 +584,17 @@ img {
         width: 100%;
         height: 400px;
         margin-bottom: 40px;
+    }
+    /*----------*/
+    .carousel-item {
+        min-width: 33.33%;
+    }
+    .carousel-image {
+        width: 80px;
+        height: 80px;
+    }
+    .prev-btn, .next-btn {
+        display: none;
     }
     /*----------*/
     footer {
