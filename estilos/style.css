@@ -12,6 +12,7 @@
     --grey: #343a40;
     --dark: black;
     --color-de-temporada: #fcbf49;
+    --tento-titulos: "Lato", sans-serif;
     --offset-below-navbar-default: 30px;
     --offset-below-navbar-fixed: 97px;
 }
@@ -29,12 +30,12 @@ main {
 .brand-container {
     width: 100%;
     height: 130px;  
-    display: flex; 
+    display: flex;
     justify-content: center; 
     align-items: center; 
 }
 .brand-container__title {
-    font-size: 40px;
+    font-size: 50px;
     font-family: "Satisfy", cursive;
     font-weight: bold;
     color: var(--soft-beige); 
@@ -83,9 +84,8 @@ main {
     opacity: 0;
 }
 .menu-toggle.active .bar:nth-child(3) {
-    transform: rotate(-47deg) translate(5px, -6.5px); /*6*/
+    transform: rotate(-47deg) translate(5px, -6.5px);
 }
-/*-----nabvar en desktop---------*/
 .navbar__list {
     padding: 0;
     margin: 0;
@@ -109,14 +109,12 @@ main {
 .navbar__list-link:hover {
     color: var(--soft-beige);;
 }
-/*------------------------------------*/
 .product-thumbnail {
     width: 100%;
     height: 650px;
     object-fit: cover;
     margin-bottom: 60px;
 }
-/*------------------------------------*/
 .season-models-title {
     display: flex;
     flex-direction: row;
@@ -128,23 +126,22 @@ main {
 .title-wrapper {
     width: 50%;
 }
-.season-titl {
+.season-title {
     text-align: center;
     font-size: 22px;
     margin: 0;
     font-weight: 800;
     letter-spacing: 2.2px;
-    font-family: "Lato", sans-serif;
+    font-family: var(--tento-titulos);
     text-transform: uppercase;
 }
 .link-paragraph {
     color: gray;
-    font-family: "Lato", sans-serif;
+    font-family: var(--tento-titulos);
     letter-spacing: 1px;
     font-size: 18px;
     text-align: end;
 }
-/*---------imagen con y precios--------*/
 .product-container {
     display: flex;
     flex-direction: row;
@@ -210,7 +207,6 @@ main {
     width: 50%;
     object-fit: cover;
 }
-
 .product-text {
     display: flex;
     flex-direction: column;
@@ -219,7 +215,7 @@ main {
 .product-title-, 
 .product-price- {
     text-align: center;
-    font-family: "Lato", sans-serif;
+    font-family: var(--tento-titulos);
     text-transform: uppercase;
     font-weight: 550;
     font-size: 24px;
@@ -228,106 +224,39 @@ main {
 .produc-parraf- {
     text-align: center;
 }
-/*-------------------------------------*/
-
-.cajon-de-redes-sociales {
-    display: flex;
-    width: 80%;
-    height: 600px;
-    background-color: brown;
-    margin: 100px auto;
-    padding: 10px;
-    overflow: hidden; 
-}
-.imagen-social {
-    display: flex;
-    background-color: #ECA6A6;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-}
-.imagen-social > img {
-    width: 100%;
-}
-
-li {
-    list-style: none;
-}
-
-.redes-sociales {
-    width: 100px;
-    height: 100px;
-    display: block;
-    text-align: center;
-    background-color: papayawhip;
-    margin: auto;
-}
-
 .container {
     margin-top: 80px;
+    margin-bottom: 80px;
 }
-img {
+.container img {
     width: 100%;
 }
-
-
-/*----------------Quien soy------------------*/
-.informacion{
-    display: flex;
-    width: 100%;
-    height: 600px;
-    background-color: #e8d1c5;
-    margin: 0px auto;
-    padding: 10px;
-    overflow: hidden; 
-    color: #6c584c;
+.container-titulo {
+    font-size: 22px;
+    font-weight: 1000;
+    letter-spacing: 2.2px;
+    font-family: "Lato",sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 40px;
 }
-.img-container {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 5px;
-    margin-right: 10px;
-    /*background-color: #4CAF50;*/
-}
-.img-container img {
-    width: 80%;
-    /*height: 60%;  Asegura que la imagen llene completamente el contenedor */
-    object-fit: cover;
-    border-radius: 5px;
-}
-.informacion .informacion-parrafo {
-    width: 50%;
-    overflow: hidden;
-    text-align: center;
-    padding: 0 10px;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-    font-family: sans-serif;
-    font-size: calc(1em * 0.875);
-}
-
-/*!--------------------------------*/
 .season-content {
     display: flex;
     flex-direction: row;
     width: 100%;
     height: 450px;
-    background-color: var(--color-de-temporada);
+    background-color: #fcbf49;
     margin-bottom: 100px;
 }
 .season-details {
     width: 50%;
     height: 100%;
     padding: 20px;
+    
 }
 .element-item-parrafo {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    justify-content: center;
     align-items: center;
     gap: 20px;
 }
@@ -349,7 +278,6 @@ img {
     border-radius: 8px;
     border: 2px solid var(--soft-beige);
 }
-/*------------*/
 .elemento-separador {
     display: block;
     width: 90%;
@@ -357,8 +285,66 @@ img {
     background-color: var(--soft-beige); 
     margin: 0 auto;
 }
-/*:)*/
-/*----------------------*/
+.carousel-container- {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background-color: var(--light-gray);
+    padding: 20px 0;
+    margin-bottom: 30px;
+}
+.carousel- {
+    overflow: hidden;
+    width: 100%;
+}
+.carousel-track- {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+.carousel-item- {
+    min-width: 20%;
+    text-align: center;
+}
+.carousel-item-content- {
+    padding: 10px;
+}
+.carousel-image- {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.carousel-caption- {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+    font-family: var(--tento-titulos);
+    text-transform: uppercase;
+}
+.prev-btn-, .next-btn- {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1;
+}
+.prev-btn- {
+    left: 0;
+}
+.next-btn- {
+    right: 0;
+}
+
 @media (min-width: 769px) {
     .navbar__item, 
     .menu__hamburguesa {
@@ -392,7 +378,7 @@ img {
         background-color: rgba(0, 0, 0, 0.3);
         border-radius: 8px;
         top: 20px;
-        font-family: "Lato", sans-serif;
+        font-family: var(--tento-titulos);
         color: aliceblue;
         
     }
@@ -406,9 +392,12 @@ img {
     .brand-container {
         height: 100px;  
     }
+    .brand-container a {
+        margin-top: 15px;
+    }
     .brand-container__title {
-        font-size: 30px;
-        margin-top: 10px;
+        font-size: 40px;
+        margin-top: 30px;
     }
     .navbar {
         justify-content: space-between;
@@ -423,7 +412,7 @@ img {
     .navbar__list {
         display: none;
         width: 100%;
-        align-items: flex-start; /*end*/
+        align-items: flex-start;
         position: fixed;
         top: 0px;
         left: 0;
@@ -450,11 +439,6 @@ img {
     .menu-toggle {
         display: flex;
     }
-    /*--------------*/
-    .product-thumbnail {
-        height: 80vh;
-    }
-    /*--------------*/
     .product-thumbnail {
         height: 80vh;
     }
@@ -475,7 +459,6 @@ img {
     .season-titl {
         padding: 5px;
     }
-    /*--------------*/
     .product-container {
         display: flex;
         flex-direction: column;
@@ -505,12 +488,10 @@ img {
     .product-text {
         display: none;
     }
-    
     .image-hidden {
         position: relative;
         display: inline-block;
     }
-    /*----------*/
     .season-content {
         display: flex;
         width: 100%;
@@ -518,9 +499,10 @@ img {
         flex-direction: column;
     }
     .season-details {
-        width: 90%;
+        width: 100%;
         padding: 10px;
         margin-top: 40px;
+        height: 400px;
     }
     .element-item-buttom {
         width: 80%;
@@ -529,46 +511,29 @@ img {
         border: 2px solid var(--soft-beige);
         padding: 10px;
         border-radius: 8px;
+    
     }
     .season-link-text {
         padding: 0;
         color: aliceblue;
-        font-family: "Lato", sans-serif;
+        font-family: var(--tento-titulos);
     }
-    .season-details {
-        width: 100%;
-        height: 400px;
+    .element-item-imag {
         margin-bottom: 40px;
     }
-    /*---------*/
+    .carousel-item- {
+        min-width: 33.33%;
+    }
+    .carousel-image- {
+        width: 80px;
+        height: 80px;
+    }
+    .prev-btn-, .next-btn- {
+        display: none;
+    }
     footer {
-        position: relative; 
+        position: relative;   
         bottom: 0;
         margin-bottom: 50px;
-    }  
-}
-@media (max-width: 768px) {
-    .informacion {
-        display: flex;
-        flex-direction: column;
     }
-
-    .img-container {
-        margin: auto;
-        width: 100%;
-    }
-    .informacion .informacion-parrafo {
-        width: 100%;
-        
-    }
-    .informacion p {
-        margin-top: 10px;
-        width: 100%;
-    }
-    h3 {
-        margin-top: 20px;
-    }
-
-
-    
 }
